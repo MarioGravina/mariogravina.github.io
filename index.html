@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mario — Daily Notes</title>
-  <meta name="description" content="Personal daily notes and short essays." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario — Blog</title>
+  <meta name="description" content="Professional blog with daily posts and articles by Mario.">
   <style>
+    /* Background same as GitHub dark-ish style */
     body {
+      background-color: #0d1117;
+      color: #c9d1d9;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 720px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+      line-height: 1.7;
     }
+
     header {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      text-align: center;
     }
+
     h1 {
-      font-size: 2.2em;
+      font-size: 2.5em;
       margin-bottom: 0.2em;
+      color: #58a6ff;
     }
+
     .subtitle {
-      color: #666;
-      font-size: 1em;
+      color: #8b949e;
+      font-size: 1.1em;
     }
-    article {
-      margin-bottom: 40px;
+
+    main ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-    article h2 {
-      margin-bottom: 0.2em;
+
+    main li {
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: #161b22;
+      border-radius: 10px;
+      transition: background-color 0.2s;
     }
-    .date {
-      color: #888;
-      font-size: 0.9em;
-      margin-bottom: 10px;
+
+    main li:hover {
+      background-color: #21262d;
     }
-    footer {
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-      color: #777;
-      font-size: 0.9em;
-    }
+
     a {
-      color: #0366d6;
       text-decoration: none;
+      color: #58a6ff;
+      font-size: 1.2em;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    .post-date {
+      font-size: 0.9em;
+      color: #8b949e;
+      margin-top: 5px;
+    }
+
+    .post-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    footer {
+      border-top: 1px solid #30363d;
+      padding-top: 20px;
+      color: #8b949e;
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -55,32 +87,28 @@
 
   <header>
     <h1>Mario</h1>
-    <div class="subtitle">Quality Assurance Engineer / Photographer / Deep Learning - Focus on XAI</div>
+    <div class="subtitle">Professional blog with articles, reviews, and daily insights</div>
   </header>
 
   <main>
-    <article>
-      <h2>First Entry</h2>
-      <div class="date">February 5, 2026</div>
-      <p>
-        This is a Placeholder until I am able to publish daily posts with various musings.
-        None of this content is or will created with AI unless otherwise noted (for experimental/educational purposes).
-        In such case I will mark it as such rather visibly. 
-        </p>
-      <p>
-        Content will be mostly text, occasionally accompanied by an image or two when
-        it adds value.
-      </p>
-    </article>
-
-    <!-- Copy the <article> block above to add new daily entries -->
-
+    <ul>
+      <li>
+        <a href="Posts/Why-AI-is-Great.html">Why AI is Great</a>
+        <div class="post-date">February 6, 2026</div>
+        <img src="Posts/photoofyou.jpg" alt="Placeholder image" class="post-image">
+      </li>
+      <li>
+        <a href="Posts/First-Post.html">First Post</a>
+        <div class="post-date">February 5, 2026</div>
+        <img src="Posts/photoofyou.jpg" alt="Placeholder image" class="post-image">
+      </li>
+      <!-- Copy the <li> block above to add new posts -->
+    </ul>
   </main>
 
   <footer>
-    <p>© 2026-2027 Mario Gravina. All Rights Reserved.</p>
+    <p>© 2026 Mario. All content is my own.</p>
   </footer>
 
 </body>
 </html>
-
