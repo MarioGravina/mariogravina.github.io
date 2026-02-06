@@ -65,8 +65,8 @@ body {
 
 #container_734c9320 {
   display: inline-block;
-  width:29%;
-  min-width:250px;
+  width:100%;
+  text-align: center; 
 }
 
 #container_734c9320_padding { margin: 10px; }
