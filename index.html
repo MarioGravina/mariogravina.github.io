@@ -1,67 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mario Gravina</title>
-  <link rel="stylesheet" href="index_html.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mario Gravina — Site Under Construction</title>
+  <meta
+    name="description"
+    content="Mario Gravina's personal website is currently being rebuilt."
+  />
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #2e2e2c;
+      --surface: rgba(22, 22, 21, 0.68);
+      --text: #f0efeb;
+      --muted: #b7b3aa;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #d0ccc3;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.055), transparent 42%),
+        linear-gradient(145deg, #343432 0%, var(--background) 100%);
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(100%, 720px);
+      padding: clamp(34px, 7vw, 68px);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 12ch;
+      margin: 0;
+      font-size: clamp(2.8rem, 10vw, 5.8rem);
+      font-weight: 650;
+      letter-spacing: -0.055em;
+      line-height: 0.98;
+    }
+
+    .intro {
+      max-width: 560px;
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
+    }
+
+    .rule {
+      width: 72px;
+      height: 1px;
+      margin: 34px 0;
+      background: var(--line);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: #c4c0b7;
+      box-shadow: 0 0 0 6px rgba(196, 192, 183, 0.10);
+    }
+
+    footer {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 18px;
+      }
+
+      main {
+        border-radius: 18px;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main {
+        animation: enter 700ms ease-out both;
+      }
+
+      @keyframes enter {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="textstyle1">
+  <main>
+    <p class="eyebrow">MarioGravina.com</p>
 
-  <img src="rc_images/pasted_image_2.jpg" id="img_1fce3f8f" alt="Header image">
+    <h1>A new site is taking shape.</h1>
 
-  <div id="container_3c70b732">
-    <div id="container_3c70b732_padding">
-      <div class="textstyle2">
+    <p class="intro">
+      I’m rebuilding this space to better reflect my work in software,
+      technology, and photography. The finished site will be here soon.
+    </p>
 
-        <div id="container_734c9320">
-          <div id="container_734c9320_padding">
-            <span class="textstyle3">Mario Gravina</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="rule" aria-hidden="true"></div>
 
-  <div style="clear:both"></div>
+    <p class="status">
+      <span class="status-dot" aria-hidden="true"></span>
+      Currently under construction
+    </p>
 
-  <!-- POSTS SECTION -->
-  <div id="container_b0df8f6">
-    <div id="container_b0df8f6_padding">
-      <main>
-        <ul>
+    <footer>
+      &copy; <span id="year"></span> Mario Gravina
+    </footer>
+  </main>
 
-          <li>
-            <a href="Posts/ArticleInProgress.html">The Day LLM Changed... Everything?</a>
-            <div class="post-date">February 6, 2026</div>
-            <img src="images/LLM_Teacher_MadeWithGemiAI.png" class="post-image" alt="AI image">
-          </li>
-<!--              USE THIS TO ADD NEXT POST - SAMPLE
-          <li>
-            <a href="Posts/POST NAME.html">NEXT POST</a>
-            <div class="post-date">February 5, 2026</div>
-            <img src="Posts/images/first-post.jpg" class="post-image" alt="First post image">
-          </li>
--->
-        </ul>
-      </main>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div style="text-align:center;">
-    <div id="container_466424f6">
-      <div id="container_466424f6_padding">
-        <span class="textstyle10">More info</span><br><br>
-        <span class="textstyle11">I explore the intersections of technology and science, examining developments methodically and distilling technical and conceptual subjects into meaningful observations. 
-          My work aims to provide patterns, challenges, and an alternative point of view in a way that is both informative and grounded.
-          Bostonians unite.</span>
-      </div>
-    </div>
-  </div>
-
-</div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
