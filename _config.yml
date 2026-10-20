@@ -1,0 +1,29 @@
+# Jekyll configuration — preserves current handcrafted site and assets
+url: "https://www.mariogravina.com"
+baseurl: ""
+title: "Mario Gravina"
+description: "Independent research, technology, and writing"
+markdown: kramdown
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+  journal:
+    output: true
+    permalink: /journal/:name/
+defaults:
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research-article
+  - scope:
+      path: ""
+      type: journal
+    values:
+      layout: journal-entry
+exclude:
+  - README.md
+  - PUBLISHING-PILOT.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,16 @@
+---
+layout: base
+---
+<section class="editorial-heading journal-heading">
+  <div class="container editorial-heading-inner">
+    <div class="eyebrow light">THE JOURNAL{% if page.category %} · {{ page.category | escape }}{% endif %}</div>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="editorial-meta">{% if page.date %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% endif %}</div>
+  </div>
+</section>
+<article class="editorial-paper journal-paper container">
+  {% if page.summary %}<p class="journal-deck">{{ page.summary | escape }}</p>{% endif %}
+  {% if page.cover %}<figure class="editorial-lead-figure"><img src="{{ page.cover | escape }}" alt="Featured photograph for {{ page.title | escape }}"></figure>{% endif %}
+  <div class="editorial-prose">{{ content }}</div>
+  <div class="editorial-return"><a class="text-link" href="/journal/">← All Journal entries</a></div>
+</article>

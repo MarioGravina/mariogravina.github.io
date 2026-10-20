@@ -1,0 +1,100 @@
+# Pages CMS configuration — visual publishing pilot
+# Select pilot/visual-publishing in Pages CMS while testing.
+media:
+  input: assets/images/editorial
+  output: /assets/images/editorial
+  rename: true
+content:
+  - name: research
+    label: Research & Articles
+    type: collection
+    path: _research
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, revision]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Article title
+        type: string
+        required: true
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: abstract
+        label: Abstract / summary
+        type: text
+        required: true
+      - name: revision
+        label: Revision (optional)
+        type: string
+      - name: cover
+        label: Featured photograph (optional)
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp]
+      - name: cover_caption
+        label: Photograph caption / attribution
+        type: string
+      - name: body
+        label: Full article
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          extensions: [jpg, jpeg, png, webp]
+  - name: journal
+    label: The Journal
+    type: collection
+    path: _journal
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Entry title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: summary
+        label: Short summary
+        type: text
+      - name: category
+        label: Topic (AI, Software, Technology, etc.)
+        type: string
+      - name: cover
+        label: Featured photograph (optional)
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp]
+      - name: body
+        label: Entry
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          extensions: [jpg, jpeg, png, webp]
+settings:
+  content:
+    merge: true
