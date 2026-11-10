@@ -1,0 +1,16 @@
+---
+layout: base
+---
+<section class="editorial-heading qa-article-heading">
+  <div class="container editorial-heading-inner">
+    <div class="eyebrow light">QA FIELD NOTES{% if page.category %} · {{ page.category | escape }}{% endif %}</div>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="editorial-meta">{% if page.date %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% endif %}{% if page.series %}<span>{{ page.series | escape }}</span>{% endif %}</div>
+  </div>
+</section>
+<article class="editorial-paper qa-article-paper container">
+  {% if page.summary %}<p class="qa-article-deck">{{ page.summary | escape }}</p>{% endif %}
+  {% if page.cover %}<figure class="editorial-lead-figure"><img src="{{ page.cover | escape }}" alt="Featured image for {{ page.title | escape }}">{% if page.cover_caption %}<figcaption>{{ page.cover_caption | escape }}</figcaption>{% endif %}</figure>{% endif %}
+  <div class="editorial-prose">{{ content }}</div>
+  <div class="editorial-return"><a class="text-link" href="/qa/">← All QA Field Notes</a></div>
+</article>

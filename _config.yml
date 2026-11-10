@@ -11,6 +11,9 @@ collections:
   journal:
     output: true
     permalink: /journal/:name/
+  qa:
+    output: true
+    permalink: /qa/:name/
 defaults:
   - scope:
       path: ""
@@ -22,6 +25,11 @@ defaults:
       type: journal
     values:
       layout: journal-entry
+  - scope:
+      path: ""
+      type: qa
+    values:
+      layout: qa-entry
 exclude:
   - README.md
   - PUBLISHING-PILOT.md

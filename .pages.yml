@@ -95,6 +95,55 @@ content:
           format: markdown
           switcher: true
           extensions: [jpg, jpeg, png, webp]
+  - name: qa
+    label: QA Field Notes
+    type: collection
+    path: _qa
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Article title
+        type: string
+        required: true
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: summary
+        label: Summary / introduction
+        type: text
+      - name: category
+        label: Topic (process, testing, careers, etc.)
+        type: string
+      - name: series
+        label: Series (optional)
+        type: string
+      - name: cover
+        label: Featured photograph (optional)
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp]
+      - name: cover_caption
+        label: Image caption / attribution
+        type: string
+      - name: body
+        label: Article content
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          extensions: [jpg, jpeg, png, webp]
 settings:
   content:
     merge: true
