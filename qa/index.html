@@ -1,0 +1,73 @@
+---
+layout: base
+title: Quality Assurance
+summary: Practical writing on software quality, quality systems, the SDLC, testing, release management, and the QA profession.
+cover: /assets/images/qa-infograph.webp
+permalink: /qa/
+---
+<section class="qa-intro">
+  <div class="container qa-intro-inner">
+    <div class="eyebrow light">SOFTWARE QUALITY · PROFESSIONAL PRACTICE · FIELD NOTES</div>
+    <h1>Quality Assurance</h1>
+    <p>Ideas, methods, lessons, and practical perspectives on the discipline of quality assurance—throughout the software development lifecycle and across the organizations that build and maintain systems.</p>
+    <div class="qa-title-rule" aria-hidden="true"></div>
+    <div class="qa-intro-foot">Process &amp; Governance <span aria-hidden="true">·</span> Testing &amp; Validation <span aria-hidden="true">·</span> Careers &amp; Practice</div>
+  </div>
+</section>
+
+<section class="qa-visual-section" aria-labelledby="qa-visual-title">
+  <div class="container">
+    <div class="qa-visual-head">
+      <div>
+        <div class="eyebrow">THE BIGGER PICTURE</div>
+        <h2 class="section-title" id="qa-visual-title">Quality is a systems discipline.</h2>
+      </div>
+      <p>Assurance connects process quality, evidence, reliability, safety, and effective decision-making. It is not synonymous with testing.</p>
+    </div>
+    <figure class="qa-figure">
+      <a href="/assets/images/qa-infograph.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Quality Assurance and Safety diagram">
+        <img src="/assets/images/qa-infograph.webp" alt="Chalkboard diagram of interdependent quality assurance, safety, and reliability functions, with independent oversight and communication across the software development lifecycle" width="1536" height="1024" decoding="async">
+      </a>
+      <figcaption>
+        Original conceptual illustration informed by the Rogers Commission's discussion of NASA's Safety, Reliability and Quality Assurance functions—not an official NASA diagram. <a href="https://www.nasa.gov/history/rogersrep/v1ch7.htm" target="_blank" rel="noopener noreferrer">Historical context: The Silent Safety Program</a>. Open the image to inspect it at full size.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="qa-topics-section" aria-labelledby="qa-topics-title">
+  <div class="container">
+    <div class="eyebrow">AREAS OF PRACTICE</div>
+    <h2 class="section-title" id="qa-topics-title">The whole profession.</h2>
+    <div class="qa-topic-grid">
+      <article><span class="qa-topic-count">01</span><h3>Quality systems &amp; processes</h3><p>Requirements, governance, lifecycle quality, traceability, audits, metrics, and continuous improvement.</p></article>
+      <article><span class="qa-topic-count">02</span><h3>Testing &amp; validation</h3><p>Test design, exploratory investigation, automation, verification, risk-based testing, and evidence.</p></article>
+      <article><span class="qa-topic-count">03</span><h3>Delivery &amp; the real world</h3><p>Release management, cross-functional collaboration, production readiness, lessons learned, and tradeoffs.</p></article>
+      <article><span class="qa-topic-count">04</span><h3>Careers &amp; professional practice</h3><p>Entering QA, career development, judgment, communication, tooling, and the evolving profession.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="editorial-index qa-index" aria-labelledby="qa-entries-title">
+  <div class="container">
+    <div class="eyebrow">QA FIELD NOTES</div>
+    <div class="qa-entries-header">
+      <h2 id="qa-entries-title">Latest writing</h2>
+      <p>Ongoing articles and field notes on quality assurance in practice.</p>
+    </div>
+    {% assign qa_entries = site.qa | sort: 'date' | reverse %}
+    {% if qa_entries.size > 0 %}
+    <div class="editorial-index-list">
+      {% for entry in qa_entries %}
+      <a class="editorial-index-item" href="{{ entry.url | relative_url }}">
+        <span class="mini-label">{{ entry.date | date: '%B %-d, %Y' }}{% if entry.category %} · {{ entry.category | escape }}{% endif %}</span>
+        <h3>{{ entry.title | escape }}</h3>
+        {% if entry.summary %}<p>{{ entry.summary | truncate: 200 | escape }}</p>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="qa-empty-note">The first QA Field Notes article is being prepared. New entries will appear here automatically when published.</p>
+    {% endif %}
+  </div>
+</section>

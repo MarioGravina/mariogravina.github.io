@@ -1,0 +1,35 @@
+/* Editorial formats: extension of MarioGravina.com's existing design */
+.editorial-heading{background:#111b20;color:#f9f6ef;padding:76px 0 66px;border-bottom:3px solid #bc8b62}
+.editorial-heading-inner{max-width:980px}
+.editorial-heading h1{font:normal clamp(39px,5vw,67px)/1.12 Georgia,'Iowan Old Style',serif;letter-spacing:-.038em;margin:17px 0 18px;max-width:950px}
+.editorial-meta{display:flex;flex-wrap:wrap;gap:24px;color:#bbc6c8;font-size:12px;letter-spacing:.03em}
+.editorial-paper{max-width:920px;padding-top:72px;padding-bottom:100px}
+.editorial-abstract{border-left:3px solid #bc8b62;padding:18px 28px;margin-bottom:55px;background:#eae8e3}
+.editorial-abstract p{font-size:17px;color:#3d4c51;line-height:1.8;margin:10px 0 0}
+.editorial-lead-figure{margin:0 0 55px}
+.editorial-lead-figure img{width:100%;max-height:670px;object-fit:contain;background:#142026}
+.editorial-lead-figure figcaption{font-size:12px;color:#6b7478;margin-top:12px;line-height:1.6}
+.editorial-prose{font-size:17px;line-height:1.85;color:#263238}
+.editorial-prose h2,.editorial-prose h3{font-family:Georgia,'Iowan Old Style',serif;letter-spacing:-.015em;color:#182228;line-height:1.22}
+.editorial-prose h2{font-size:32px;margin:55px 0 18px}.editorial-prose h3{font-size:25px;margin:35px 0 14px}
+.editorial-prose p,.editorial-prose ul,.editorial-prose ol{margin:0 0 24px}
+.editorial-prose a{color:#375c6e;text-decoration:underline;text-decoration-color:#bc8b62;text-underline-offset:3px}
+.editorial-prose img{margin:30px auto;max-height:760px;object-fit:contain}
+.editorial-prose blockquote{border-left:3px solid #bc8b62;color:#405059;padding-left:24px;margin:35px 0;font-style:italic}
+.editorial-prose pre{background:#17232a;color:#f1efea;padding:21px;overflow-x:auto;font-size:14px;line-height:1.6}
+.editorial-prose :not(pre)>code{font-family:ui-monospace,monospace;background:#e5e7e5;padding:2px 5px;border-radius:2px;font-size:.9em}
+.editorial-prose table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;margin:26px 0;font-size:14px}
+.editorial-prose th,.editorial-prose td{border:1px solid #d2d7d6;padding:10px 13px;text-align:left;min-width:120px}
+.editorial-prose th{background:#e7e8e6}
+.editorial-return{margin-top:66px;border-top:1px solid #d5d7d4;padding-top:30px}
+.journal-heading{background:#213039;border-bottom-color:#899cac}.journal-paper{max-width:820px}
+.journal-deck{font:normal 24px/1.5 Georgia,'Iowan Old Style',serif;color:#5d6b6f;margin:0 0 42px}
+.editorial-index{padding:70px 0 95px;background:#ecebe7}
+.editorial-index h2{font:normal clamp(31px,3.5vw,45px)/1.2 Georgia,serif;letter-spacing:-.03em;color:#182228;margin:9px 0 20px}
+.editorial-index-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.editorial-index-item{background:#fffdf9;border:1px solid #daddda;padding:27px 29px;display:block}
+.editorial-index-item h3{font:normal 26px/1.2 Georgia,serif;color:#182228;margin:12px 0 10px}
+.editorial-index-item p{font-size:14px;color:#657176;margin:0}
+.editorial-index-item:hover{border-color:#bc8b62}
+.editorial-index-item .mini-label{color:#7d6450}
+@media(max-width:700px){.editorial-heading{padding:55px 0 50px}.editorial-paper{padding-top:45px;padding-bottom:75px}.editorial-prose{font-size:16px}.editorial-abstract{padding:16px}.editorial-index-list{grid-template-columns:1fr}.editorial-index{padding:55px 0}}
